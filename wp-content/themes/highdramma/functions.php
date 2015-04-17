@@ -46,11 +46,15 @@ function highdramma_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'highdramma' ),
+	) );
+
+	register_nav_menus( array(
+		'social' => __( 'Social Menu', 'highdramma')
 	) );
 
 	/*
@@ -70,10 +74,10 @@ function highdramma_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'highdramma_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'highdramma_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 }
 endif; // highdramma_setup
 add_action( 'after_setup_theme', 'highdramma_setup' );
@@ -102,6 +106,10 @@ add_action( 'widgets_init', 'highdramma_widgets_init' );
 function highdramma_scripts() {
 	wp_enqueue_style( 'highdramma-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'highdramma-google-fonts', 'http://fonts.googleapis.com/css?family=Reenie+Beanie:400');
+
+	wp_enqueue_style( 'highdramma-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+
 	wp_enqueue_script( 'highdramma-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'highdramma-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -115,7 +123,7 @@ add_action( 'wp_enqueue_scripts', 'highdramma_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -136,3 +144,53 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+//Function to set flexible headers.
+$args = array(
+	'flex-width'    => true,
+	'width'         => 980,
+	'flex-height'    => true,
+	'height'        => 200,
+	'default-image' => get_template_directory_uri() . '/images/hd-logo-200x208.png',
+);
+add_theme_support( 'custom-header', $args );
+
+
+//Function to create Member post types
+add_action( 'init', 'create_post_types');
+
+function create_post_types() {
+ register_post_type( 'member', 
+ array(
+      'labels' => array(
+      	'name' => __( 'Members' ),
+      	'singular_name' => __( 'Member' ),
+      	'add_new' => __( 'Add New' ),
+      	'add_new_item' => __( 'Add New Member' ),
+      	'edit' => __( 'Edit' ),
+      	'edit_item' => __( 'Edit Member' ),
+      	'new_item' => __( 'New Member' ),
+      	'view' => __( 'View Members' ),
+      	'view_item' => __( 'View Member' ),
+      	'search_items' => __( 'Search Members' ),
+      	'not_found' => __( 'No Members found' ),
+      	'not_found_in_trash' => __( 'No Members found in Trash' ),
+      	'parent' => __( 'Meet the Group' ),
+      ),
+ 'public' => true,
+      'menu_position' => 4,
+      'rewrite' => array('slug' => 'member-bios'),
+      'supports' => array( 'title', 'excerpt', 'thumbnail' ),
+      'taxonomies' => array('category', 'post_tag'),
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'query_var' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+     )
+  );
+}
+
+
+
