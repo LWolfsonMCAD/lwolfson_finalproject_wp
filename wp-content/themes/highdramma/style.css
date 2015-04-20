@@ -54,6 +54,7 @@ html {
 body {
 	width: 960px;
 	margin: 0 auto;
+	overflow: auto;
 }
 
 article,
@@ -636,7 +637,7 @@ a:active {
 /*Social media*/
 #social-menu {
 	position: relative;
-	top: -696px;
+	top: -650px;
 	left: 731px;
 	text-align: right;
 	font-family: 'Fontawesome';
@@ -646,6 +647,8 @@ a:active {
 #social-menu ul {
 	display: inline;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 #social-menu ul li {
@@ -835,6 +838,11 @@ a:active {
 	border-bottom: solid 45px #2CBF89;
 }
 
+#site-logo {
+	margin-left: 36px;
+	margin-top: 33px;
+}
+
 #masthead h1 {
 	display: none;
 }
@@ -843,16 +851,12 @@ a:active {
 	display: none;
 }
 
-#site-logo {
-	margin-left: 36px;
-	margin-top: -118px;
-}
-
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
+	clear: both;
 	margin-left: 36px;
 	font-size: .5em;
 }
@@ -861,6 +865,7 @@ a:active {
 # Content
 --------------------------------------------------------------*/
 .site-main {
+	clear: both;
 	margin: 0px 36px;
 }
 
