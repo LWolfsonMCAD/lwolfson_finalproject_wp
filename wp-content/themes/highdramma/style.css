@@ -52,7 +52,8 @@ html {
 }
 
 body {
-	margin: 0;
+	width: 960px;
+	margin: 0 auto;
 }
 
 article,
@@ -360,6 +361,7 @@ html {
 
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
+	border: 1px solid #d3d3d3;
 }
 
 blockquote:before,
@@ -602,6 +604,87 @@ a:active {
 .main-navigation .current_page_ancestor > a {
 }
 
+/*Member Menu*/
+.member-menu {
+	float: left;
+	width: 162px;
+	margin-right: 10px;
+	margin-top: 100px;
+	font-family: 'Reenie Beanie', serif;
+}
+
+.member-menu ul {
+	margin-left: 10px;
+	list-style: none;
+	text-decoration: none;
+}
+
+.member-menu li {
+	display: block;
+	padding: 0px 10px;
+}
+
+.member-menu li a {
+	text-decoration: none;
+	color: #000;
+}
+
+.member-menu li a:hover {
+	color: blue;
+}
+
+/*Social media*/
+#social-menu {
+	position: relative;
+	top: -696px;
+	left: 731px;
+	text-align: right;
+	font-family: 'Fontawesome';
+	font-size: 32px;
+}
+
+#social-menu ul {
+	display: inline;
+	list-style: none;
+}
+
+#social-menu ul li {
+	position: relative;
+	float: left;
+	padding: 5px 10px;
+}
+
+#social-menu li a {
+	color: #000;
+	text-decoration: none;
+}
+
+#social-menu li a[href*="tumblr.com"]::before { content: '\f173';}
+
+#social-menu li a[href*="twitter.com"]::before { content: '\f099';}
+
+#social-menu li a[href*="plus.google.com"]::before { content: '\f0d5';}
+
+#social-menu li a[href*="pinterest.com"]::before { content: '\f0d2';}
+
+#social-menu li a[href*="github.com"]::before { content: '\f09b';}
+
+#social-menu li a[href*="youtube.com"]::before { content: '\f167';}
+
+#social-menu li a[href*="flickr.com"]::before { content: '\f16e';}
+
+#social-menu li a[href*="instagram.com"]::before { content: '\f16d';}
+
+#social-menu li a[href*="vimeo.com"]::before { content: '\f194';}
+
+#social-menu li a[href*="facebook.com"]::before { content: '\f230';}
+
+#social-menu li a[href*="linkedin.com"]::before { content: '\f0e1';}
+
+#social-menu li a:after {
+	display: none;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -767,8 +850,20 @@ a:active {
 
 
 /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+	margin-left: 36px;
+	font-size: .5em;
+}
+
+/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.site-main {
+	margin: 0px 36px;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -799,6 +894,101 @@ a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+### Member Bio Posts
+--------------------------------------------------------------*/
+.member-biography {
+	float: left;
+	width: 497px;
+	margin-top: 50px;
+	margin-right: 4px;
+	padding-left: 25px;
+}
+
+.member-name {
+	clear: none;
+	margin: -18px 22px 0px;
+}
+
+.members-title {
+	margin: -10px 22px;
+	font-size: 1rem;
+}
+
+.member-quote {
+	margin-top: 12px;
+}
+
+.member-quote blockquote {
+	display: inline-block;
+	margin: 0 0 0 20px;
+	line-height: 0.7;
+	font-size: 2rem;
+}
+
+blockquote:before {
+	float: left;
+	content: "\201C";
+	font-size: 2.5em;
+	color: #ccc;
+}
+
+blockquote p {
+	margin-bottom: 0;
+}
+
+.member-bio {
+	margin-top: 25px;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+
+    -webkit-column-width: 215px;
+    -moz-column-width: 215px;
+    column-width: 215px;
+
+	-webkit-column-gap: 10px; /* Chrome, Safari, Opera */
+	-moz-column-gap: 10px; /* Firefox */
+	column-gap: 10px;
+	font-size: 14px;
+}
+
+.member-bio p:first-of-type {
+	margin-top: 0;
+}
+
+.member-bio p {
+	margin-bottom: 5px;
+}
+
+.member-favorites {
+	float: right;
+	margin: 72px 0px;
+}
+
+.member-favorites h2 {
+	display: none;
+}
+
+.member-favorites article {
+	margin-top: -20px;
+}
+
+.member-favorites h3 {
+	margin-bottom: 0;
+}
+
+.member-favorites ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 10px;
+}
+
+.member-favorites li {
+	font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -923,3 +1113,30 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+/*--------------------------------------------------------------
+## Grid and column settings
+--------------------------------------------------------------*/
+
+.grid {
+	float: left;
+	margin-right: 6px;
+}
+
+.columns-3 {
+	width: 162px;
+}
+
+.columns-4 {
+	width: 217px;
+}
+
+.columns-5 {
+	width: 273px;
+}
+
+.columns-8 {
+	width: 441px;
+}
+

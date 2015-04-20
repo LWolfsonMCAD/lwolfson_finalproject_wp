@@ -57,6 +57,10 @@ function highdramma_setup() {
 		'social' => __( 'Social Menu', 'highdramma')
 	) );
 
+	register_nav_menus( array(
+		'members' => __( 'Member Menu', 'highdramma')
+	) );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -104,11 +108,11 @@ add_action( 'widgets_init', 'highdramma_widgets_init' );
  * Enqueue scripts and styles.
  */
 function highdramma_scripts() {
-	wp_enqueue_style( 'highdramma-style', get_stylesheet_uri() );
-
 	wp_enqueue_style( 'highdramma-google-fonts', 'http://fonts.googleapis.com/css?family=Reenie+Beanie:400');
 
 	wp_enqueue_style( 'highdramma-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+
+	wp_enqueue_style( 'highdramma-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'highdramma-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -155,6 +159,25 @@ $args = array(
 	'default-image' => get_template_directory_uri() . '/images/hd-logo-200x208.png',
 );
 add_theme_support( 'custom-header', $args );
+
+function highdramma_social_menu() {
+	if ( has_nav_menu( 'social' ) ) {
+		wp_nav_menu(
+			array(
+				'theme_location' => 'social',
+				'container'		 => 'div',
+				'container_id'	 => 'social-menu',
+				'container_class' => 'social-menu',
+				'menu-id'			=> 'social-menu-items',
+				'menu_class'		=> 'menu-items',
+				'depth'				=> 1,
+				'link_before'		=> '<span class="screen-reader-text">',
+				'link_after'		=> '</span>',
+				'fallback_cb'		=> '',	
+			)
+		);
+		}
+}
 
 
 //Function to create Member post types

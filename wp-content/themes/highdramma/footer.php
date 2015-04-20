@@ -12,10 +12,12 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'highdramma' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'highdramma' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'highdramma' ), 'highdramma', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<p>&#169; Copyright <span class="high-dramma">High Dramma</span> 2015</p>
 		</div><!-- .site-info -->
+
+		<div class="grid columns-3">
+  			<?php highdramma_social_menu(); ?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
