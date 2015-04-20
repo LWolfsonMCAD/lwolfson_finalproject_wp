@@ -610,7 +610,7 @@ a:active {
 	float: left;
 	width: 162px;
 	margin-right: 10px;
-	margin-top: 100px;
+	margin-top: 70px;
 	font-family: 'Reenie Beanie', serif;
 }
 
@@ -637,8 +637,8 @@ a:active {
 /*Social media*/
 #social-menu {
 	position: relative;
-	top: -650px;
-	left: 731px;
+	top: -52px;
+	left: 772px;
 	text-align: right;
 	font-family: 'Fontawesome';
 	font-size: 32px;
@@ -830,6 +830,10 @@ a:active {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-branding {
+	height: 164px;
+}
+
 #masthead {
 	clear: both;
 	width: 100%;
@@ -903,12 +907,37 @@ a:active {
 
 
 /*--------------------------------------------------------------
+### Homepage
+--------------------------------------------------------------*/
+#homepage-introduction {
+	margin-top: 45px;
+	font-size: 14px;
+}
+
+#featured-section {
+	margin-top: -35px;
+	margin-left: 55px;
+}
+
+#featured-section h1 {
+	margin: 10px 0px;
+	font-size: 1.6em;
+	line-height: 1.1;
+	text-align: center;
+}
+
+#featured-section p {
+	font-size: 14px;
+}
+
+
+/*--------------------------------------------------------------
 ### Member Bio Posts
 --------------------------------------------------------------*/
 .member-biography {
 	float: left;
 	width: 497px;
-	margin-top: 50px;
+	margin-top: 3px;
 	margin-right: 4px;
 	padding-left: 25px;
 }
@@ -971,7 +1000,7 @@ blockquote p {
 
 .member-favorites {
 	float: right;
-	margin: 72px 0px;
+	margin: 28px 0px 72px;
 }
 
 .member-favorites h2 {
@@ -1139,6 +1168,10 @@ object {
 
 .columns-5 {
 	width: 273px;
+}
+
+.columns-7 {
+	width: 385px;
 }
 
 .columns-8 {

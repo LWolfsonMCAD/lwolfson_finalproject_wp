@@ -15,9 +15,6 @@
 			<p>&#169; Copyright <span class="high-dramma">High Dramma</span> 2015</p>
 		</div><!-- .site-info -->
 
-		<div class="grid columns-3">
-  			<?php highdramma_social_menu(); ?>
-		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
