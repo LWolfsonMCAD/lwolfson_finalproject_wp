@@ -32,6 +32,12 @@ get_header(); ?>
 			<?php the_field( 'featured_content' ); ?>
 		</section>
 
+		<section class="social-media-feeds columns-3">
+			<div class="fb-page" data-href="https://www.facebook.com/highdramma" data-width="162px" data-height="180px" data-hide-cover="true" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/highdramma"><a href="https://www.facebook.com/highdramma">High Dramma</a></blockquote></div></div>
+
+			<iframe width="162px" height="180px" src="https://www.youtube.com/embed/Ri0Rk_j6ezk" frameborder="0" allowfullscreen></iframe>
+		</section>
+
 		
 <?php endwhile;?>
 
