@@ -32,7 +32,7 @@ get_header(); ?>
 			<?php the_field( 'featured_content' ); ?>
 		</section>
 
-		<section class="social-media-feeds">
+		<section class="social-media-feeds columns-3">
 			<iframe width="210px" height="180px" src="https://www.youtube.com/embed/Ri0Rk_j6ezk" frameborder="0" allowfullscreen></iframe>
 
 
