@@ -1043,6 +1043,7 @@ div.tweettxts {
 
 blockquote:before {
 	float: left;
+	margin-top: -22px;
 	content: "\201C";
 	font-size: 2.5em;
 	color: #ccc;
