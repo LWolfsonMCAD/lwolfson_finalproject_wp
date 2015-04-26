@@ -11,12 +11,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<div id="homepage-content">
 		<section id="homepage-introduction" class="grid columns-4">
 			<?php the_field( 'homepage_introduction' ); ?>
 		</section>
 
-		<section id="featured-section" class="grid columns-7">
+		<section id="featured-section" class="grid columns-9">
 			<h1><?php the_field( 'featured_title' ); ?></h1>
 
 			<?php 
@@ -32,24 +31,26 @@ get_header(); ?>
 			<?php the_field( 'featured_content' ); ?>
 		</section>
 
-		<section class="social-media-feeds columns-3">
-			<iframe width="210px" height="180px" src="https://www.youtube.com/embed/Ri0Rk_j6ezk" frameborder="0" allowfullscreen></iframe>
+		<section class="social-media-feeds">
+			<article class="facebook grid columns-5">
+				<h3>High Dramma on Facebook</h3>
+				
+				<div class="feed"><?php fb_feed(); ?></div>
+			</article>
 
+			<article class="youtube grid columns-4">
+				<h3>High Dramma's Latest Video</h3>
 
-			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-			</script>
+				<div class="feed"><?php the_field( 'youtube_feed' ); ?></div>
+			</article>
 
-			<div class="fb-page" data-href="https://www.facebook.com/highdramma" data-width="210px" data-height="260px" data-hide-cover="true" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><!-- <blockquote cite="https://www.facebook.com/highdramma"><a href="https://www.facebook.com/highdramma">High Dramma</a></blockquote> --></div></div>
+			<article class="twitter grid columns-4">
+				<h3>Tweets from High Dramma</h3>
 
+				<div class="feed"><?php echo apply_filters('the_content', get_post_meta($post->ID,'twitter_feed',true)); ?></div>
+			</article>
+		
 		</section>
-	</div>
 		
 <?php endwhile;?>
 

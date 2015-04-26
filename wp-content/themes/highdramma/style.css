@@ -45,16 +45,26 @@ Normalizing styles have been helped along thanks to the fine work of Nicolas Gal
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+	width: 100%;
+    height: 100%;
+    overflow-x: auto; 
 }
 
 body {
 	width: 960px;
 	margin: 0 auto !important;
 	overflow: auto;
+	overflow-x: hidden;
 }
 
 article,
@@ -915,13 +925,12 @@ a:active {
 }
 
 #featured-section {
-	margin-top: -35px;
-	margin-left: 55px;
+	margin: -35px 50px 35px 55px;
 }
 
 #featured-section h1 {
 	margin: 10px 0px;
-	font-size: 1.6em !important;
+	font-size: 1.6em;
 	line-height: 1.1;
 	text-align: center;
 }
@@ -930,6 +939,75 @@ a:active {
 	font-size: 14px;
 }
 
+.social-media-feeds {
+	clear: both;
+	margin-left: 278px;
+}
+
+.social-media-feeds h3 {
+	font-size: .9em;
+}
+
+/*.social-media-feeds h3:first-of-type {
+	width: 273px;
+	display: inline;
+	float: left;
+}*/
+
+/*.feed {
+	border: solid 1px #2CBF89;
+}*/
+
+.facebook.columns-5 {
+	float: left;
+	margin-right: 16px;
+}
+
+#fb-feed {
+	height: 300px;
+	overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+	font-size: 12px;
+}
+
+p.fb-page-name {
+	height: 1px;
+	display: none;
+}
+
+.youtube {
+	margin-bottom: 25px;
+}
+
+.aiwidgetscss.widget {
+	float: left;
+	width: 217px;
+	height: 140px;
+	overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+}
+
+.aiwidgetscss.widget  h3{
+	display: none;
+}
+
+.aiwidget-title {
+	display: none;
+}
+
+div.tweettxts {
+	font-size: 12px;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
 
 /*--------------------------------------------------------------
 ### Member Bio Posts
@@ -953,7 +1031,7 @@ a:active {
 }
 
 .member-quote {
-	margin-top: 12px;
+	margin-top: 42px;
 }
 
 .member-quote blockquote {
@@ -1000,7 +1078,7 @@ blockquote p {
 
 .member-favorites {
 	float: right;
-	margin: 28px 0px 72px;
+	margin: 52px 0px 72px;
 }
 
 .member-favorites h2 {
@@ -1009,6 +1087,7 @@ blockquote p {
 
 .member-favorites article {
 	margin-top: -20px;
+	margin-bottom: 25px;
 }
 
 .member-favorites h3 {
@@ -1176,6 +1255,10 @@ object {
 
 .columns-8 {
 	width: 441px;
+}
+
+.columns-9 {
+	width: 497px;
 }
 
 
