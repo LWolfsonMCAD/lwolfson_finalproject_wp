@@ -540,7 +540,7 @@ a:active {
 	clear: both;
 	display: block;
 	float: right;
-	margin-top: 70px;
+	margin-top: 72px;
 	width: 575px;
 	font-family: 'Reenie Beanie', serif;
 	font-size: 2rem;
@@ -557,13 +557,17 @@ a:active {
 	float: left;
 	position: relative;
 	display: block;
-	padding: 0px 15px;
 }
 
 .main-navigation a {
 	display: block;
+	padding: 0px 15px;
 	text-decoration: none;
 	color: #000;
+}
+
+.main-navigation a:hover {
+	background: #2CBF89;
 }
 
 .main-navigation ul ul {
@@ -945,8 +949,23 @@ a:active {
 }
 
 .social-media-feeds h3 {
+	font-family: 'Reenie Beanie', serif;
 	font-size: .9em;
 }
+
+/*.social-media-feeds h3 a {
+	font-family: 'Fontawesome';
+}
+
+.social-media-feeds h3 a[href*="twitter.com"]::before { content: '\f099';}
+
+.social-media-feeds h3 a[href*="youtube.com"]::before { content: '\f167';}
+
+.social-media-feeds h3 a[href*="facebook.com"]::before { content: '\f230';}
+
+.social-media-feeds h3 a:after {
+	display: none;
+}*/
 
 /*.social-media-feeds h3:first-of-type {
 	width: 273px;

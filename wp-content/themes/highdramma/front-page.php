@@ -33,19 +33,19 @@ get_header(); ?>
 
 		<section class="social-media-feeds">
 			<article class="facebook grid columns-5">
-				<h3>High Dramma on Facebook</h3>
+				<h3>High Dramma on <a href="https://www.facebook.com/highdramma"><span class="screen-reader-text">Facebook</span></a></h3>
 				
 				<div class="feed"><?php fb_feed(); ?></div>
 			</article>
 
 			<article class="youtube grid columns-4">
-				<h3>High Dramma's Latest Video</h3>
+				<h3>High Dramma's New <a href="https://www.youtube.com/channel/UCHSHtvIG91wWN1zLP7llOPg"><span class="screen-reader-text">YouTube</span></a>Video</h3>
 
 				<div class="feed"><?php the_field( 'youtube_feed' ); ?></div>
 			</article>
 
 			<article class="twitter grid columns-4">
-				<h3>Tweets from High Dramma</h3>
+				<h3>High Dramma on <a href="https://twitter.com/highdramma"><span class="screen-reader-text">Twitter</span></a></h3>
 
 				<div class="feed"><?php echo apply_filters('the_content', get_post_meta($post->ID,'twitter_feed',true)); ?></div>
 			</article>
