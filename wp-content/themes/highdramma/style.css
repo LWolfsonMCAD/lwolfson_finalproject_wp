@@ -619,6 +619,17 @@ a:active {
 .main-navigation .current_page_ancestor > a {
 }
 
+#primary-menu ul.sub-menu {
+	margin-top: -1px;
+	background-color: #2CBF89;
+	text-align: center;
+}
+
+#primary-menu ul.sub-menu a:hover {
+	color: #000;
+	background-color: #fff;
+}
+
 /*Member Menu*/
 .member-menu {
 	float: left;
