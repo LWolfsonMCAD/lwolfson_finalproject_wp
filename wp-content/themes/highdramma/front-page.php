@@ -39,7 +39,7 @@ get_header(); ?>
 			</article>
 
 			<article class="youtube grid columns-4">
-				<h3>High Dramma's New <a href="https://www.youtube.com/channel/UCHSHtvIG91wWN1zLP7llOPg"><span class="screen-reader-text">YouTube</span></a>Video</h3>
+				<h3>The Latest Video on <a href="https://www.youtube.com/channel/UCHSHtvIG91wWN1zLP7llOPg"><span class="screen-reader-text">YouTube</span></a></h3>
 
 				<div class="feed"><?php the_field( 'youtube_feed' ); ?></div>
 			</article>

@@ -960,11 +960,11 @@ a:active {
 }
 
 .social-media-feeds h3 {
-	font-family: 'Reenie Beanie', serif;
-	font-size: .9em;
+	font-family: Helvetica, sans-serif;
+	font-size: .8em;
 }
 
-/*.social-media-feeds h3 a {
+.social-media-feeds h3 a {
 	font-family: 'Fontawesome';
 }
 
@@ -976,13 +976,24 @@ a:active {
 
 .social-media-feeds h3 a:after {
 	display: none;
-}*/
+}
 
-/*.social-media-feeds h3:first-of-type {
+.social-media-feeds h3:first-of-type {
 	width: 273px;
 	display: inline;
 	float: left;
-}*/
+}
+
+.social-media-feeds h3 a {
+	text-decoration: none;
+	font-size: 30px;
+}
+
+.social-media-feeds h3 a:active,
+.social-media-feeds h3 a:link,
+.social-media-feeds h3 a:visited {
+	color: #2CBF89;
+}
 
 /*.feed {
 	border: solid 1px #2CBF89;
