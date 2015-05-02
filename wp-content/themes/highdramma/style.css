@@ -995,9 +995,9 @@ a:active {
 	color: #2CBF89;
 }
 
-/*.feed {
-	border: solid 1px #2CBF89;
-}*/
+.feed {
+	float: left;
+}
 
 .facebook.columns-5 {
 	float: left;
