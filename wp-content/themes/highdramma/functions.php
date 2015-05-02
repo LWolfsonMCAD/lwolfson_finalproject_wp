@@ -235,3 +235,12 @@ function hide_editor() {
   }
 }
 
+
+
+function magnific_popup_files() {
+    wp_enqueue_style( 'magnific', get_template_directory_uri() . '/css/magnific-popup-gallery.css' ); 
+    wp_enqueue_script( 'magnific', get_template_directory_uri() .'/js/magnific-popup-gallery.min.js', array('jquery'), false, true );
+}
+
+add_action( 'wp_enqueue_scripts', 'magnific_popup_files' );
+
