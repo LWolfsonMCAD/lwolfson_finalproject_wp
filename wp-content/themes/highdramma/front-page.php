@@ -13,6 +13,12 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 		<section id="homepage-introduction" class="grid columns-4">
 			<?php the_field( 'homepage_introduction' ); ?>
+
+			<article class="youtube">
+				<h3>High Dramma's Latest Video</h3>	
+
+				<div class="feed"><?php the_field( 'youtube_feed' ); ?></div>
+			</article>
 		</section>
 
 		<section id="featured-section" class="grid columns-9">
@@ -36,12 +42,6 @@ get_header(); ?>
 				<h3>High Dramma on <a href="https://www.facebook.com/highdramma"><span class="screen-reader-text">Facebook</span></a></h3>
 				
 				<div class="feed"><?php fb_feed(); ?></div>
-			</article>
-
-			<article class="youtube grid columns-4">
-				<h3>The Latest Video on <a href="https://www.youtube.com/channel/UCHSHtvIG91wWN1zLP7llOPg"><span class="screen-reader-text">YouTube</span></a></h3>
-
-				<div class="feed"><?php the_field( 'youtube_feed' ); ?></div>
 			</article>
 
 			<article class="twitter grid columns-4">

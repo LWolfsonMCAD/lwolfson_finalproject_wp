@@ -570,6 +570,10 @@ a:active {
 	background: #2CBF89;
 }
 
+.main-navigation ul li:hover {
+	background: #2CBF89;
+}
+
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
@@ -647,16 +651,18 @@ a:active {
 
 .member-menu li {
 	display: block;
-	padding: 0px 10px;
 }
 
-.member-menu li a {
+.member-menu a {
+	display: block;
+	width: 80px;
+	padding: 0px 10px;
 	text-decoration: none;
 	color: #000;
 }
 
 .member-menu li a:hover {
-	color: blue;
+	background: #2CBF89;
 }
 
 /*Social media*/
@@ -939,6 +945,19 @@ a:active {
 	font-size: 14px;
 }
 
+.youtube {
+	margin-top: 35px;
+}
+
+.youtube h3 {
+	font-family: Helvetica, sans-serif;
+}
+
+.youtube iframe {
+	width: 217px;
+	height: 124px;
+}
+
 #featured-section {
 	margin: -35px 50px 35px 55px;
 }
@@ -955,7 +974,6 @@ a:active {
 }
 
 .social-media-feeds {
-	clear: both;
 	margin-left: 278px;
 }
 
@@ -1023,7 +1041,7 @@ p.fb-page-name {
 .aiwidgetscss.widget {
 	float: left;
 	width: 217px;
-	height: 140px;
+	height: 300px;
 	overflow: -moz-scrollbars-vertical;
     overflow: scroll;
 }
