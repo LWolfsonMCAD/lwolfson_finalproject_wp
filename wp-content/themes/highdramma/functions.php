@@ -244,3 +244,15 @@ function magnific_popup_files() {
 
 add_action( 'wp_enqueue_scripts', 'magnific_popup_files' );
 
+
+// function adjustStyle() {
+//     wp_enqueue_style( 'adjustStyle', get_template_directory_uri() . '/css/mobile.css' ); 
+//     wp_enqueue_script( 'adjustStyle', get_template_directory_uri() .'/js/adjustStyle.js', array('jquery'), false, true );
+// }
+
+// add_action( 'wp_enqueue_scripts', 'adjustStyle');
+
+
+
+
+

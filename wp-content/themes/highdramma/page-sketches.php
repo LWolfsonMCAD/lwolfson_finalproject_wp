@@ -21,7 +21,7 @@ get_header(); ?>
 			<section class="sketch-videos">
 				<h2><?php the_field('sketch_videos_title'); ?></h2>
 
-				<?php
+				<div class="video-gallery"><?php
 
 					// check if the repeater field has rows of data
 					if( have_rows('sketch_videos') ):
@@ -40,7 +40,7 @@ get_header(); ?>
 
 					endif;
 
-				?>
+				?></div>
 			</section>
 
 			<section class="sketch-photos">

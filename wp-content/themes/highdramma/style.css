@@ -62,8 +62,9 @@ html {
 
 body {
 	width: 960px;
+	height: auto;
 	margin: 0 auto !important;
-	overflow: auto;
+	overflow: hidden;
 	overflow-x: hidden;
 }
 
@@ -890,8 +891,15 @@ a:active {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.site-footer {
+#colophon {
 	clear: both;
+	width: 100%;
+	height: 45px;
+	background-color: #2CBF89;	
+}
+
+.site-info {
+	margin-top: 15px;
 	margin-left: 36px;
 	font-size: .5em;
 }
@@ -940,26 +948,9 @@ a:active {
 /*--------------------------------------------------------------
 ### Homepage
 --------------------------------------------------------------*/
-#homepage-introduction {
-	margin-top: 45px;
-	font-size: 14px;
-}
-
-.youtube {
-	margin-top: 35px;
-}
-
-.youtube h3 {
-	font-family: Helvetica, sans-serif;
-}
-
-.youtube iframe {
-	width: 217px;
-	height: 124px;
-}
-
 #featured-section {
-	margin: -35px 50px 35px 55px;
+	margin: -35px 50px 50px 224px;
+	border-bottom: dotted 5px #2CBF89;	
 }
 
 #featured-section h1 {
@@ -973,8 +964,15 @@ a:active {
 	font-size: 14px;
 }
 
+.featured-content {
+	margin-bottom: 50px;
+}
+
 .social-media-feeds {
-	margin-left: 278px;
+	clear: both;
+	width: 888px;
+	height: 345px;	
+	padding-left: 36px;	
 }
 
 .social-media-feeds h3 {
@@ -1017,9 +1015,9 @@ a:active {
 	float: left;
 }
 
-.facebook.columns-5 {
+article.facebook {
 	float: left;
-	margin-right: 16px;
+	margin-right: 55.75px;
 }
 
 #fb-feed {
@@ -1038,8 +1036,10 @@ p.fb-page-name {
 	display: none;
 }
 
-.youtube {
-	margin-bottom: 25px;
+
+article.twitter {
+	margin-right: 55.75px;
+	height: 345px;
 }
 
 .aiwidgetscss.widget {
@@ -1060,6 +1060,26 @@ p.fb-page-name {
 
 div.tweettxts {
 	font-size: 12px;
+}
+
+article.youtube {
+	height: 345px;
+}
+
+.youtube iframe {
+	width: 217px;
+	height: 124px;
+	margin-bottom: 20px;
+}
+
+#homepage-introduction {
+	margin: 55px 0px 50px 224px;
+	font-size: 14px;
+	border-top: dotted 5px #2CBF89;	
+}
+
+.introduction-content {
+	margin-top: 50px;
 }
 
 ::-webkit-scrollbar {
@@ -1092,6 +1112,12 @@ div.tweettxts {
 	height: 203px;
 	margin-right: 58px;
 	margin-bottom: 10px;
+}
+
+.video-gallery {
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+/*	border-bottom: dotted 5px #2CBF89;*/	
 }
 
 .entry-footer {

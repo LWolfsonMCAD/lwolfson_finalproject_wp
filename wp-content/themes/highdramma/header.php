@@ -13,6 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel='stylesheet' media='screen and (min-width: 480px) and (max-width: 568px)' href='css/mobile.css' />
+<!-- <link id="size-stylesheet" rel="stylesheet" type="text/css" href="mobile.css" /> -->
 
 <?php wp_head(); ?>
 </head>
