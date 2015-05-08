@@ -1580,6 +1580,10 @@ section.sketch-photos {
 	text-align: center;
 }
 
+.sketch-videos iframe {
+	margin: 10px auto;
+}
+
 div.popup-gallery {
 	margin: 0;
 }
