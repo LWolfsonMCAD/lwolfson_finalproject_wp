@@ -61,7 +61,8 @@ html {
 }
 
 body {
-	width: 960px;
+	width: 80%;
+	max-width: 960px;
 	height: auto;
 	margin: 0 auto !important;
 	overflow: hidden;
@@ -542,7 +543,8 @@ a:active {
 	display: block;
 	float: right;
 	margin-top: 72px;
-	width: 575px;
+	/*width: 575px;*/
+	width: 59.752%;
 	font-family: 'Reenie Beanie', serif;
 	font-size: 2rem;
 }
@@ -909,6 +911,7 @@ a:active {
 --------------------------------------------------------------*/
 .site-main {
 	clear: both;
+	width: 92.292%;
 	margin: 0px 36px;
 }
 
@@ -970,7 +973,7 @@ a:active {
 
 .social-media-feeds {
 	clear: both;
-	width: 888px;
+	width: 100%;
 	height: 345px;	
 	padding-left: 36px;	
 }
@@ -1016,8 +1019,10 @@ a:active {
 }
 
 article.facebook {
+	width: 37.021%;
+	min-width: 300px;
 	float: left;
-	margin-right: 55.75px;
+	padding-right: 5%;
 }
 
 #fb-feed {
@@ -1038,7 +1043,8 @@ p.fb-page-name {
 
 
 article.twitter {
-	margin-right: 55.75px;
+	width: 32.715%;
+	min-width: 217px;
 	height: 345px;
 }
 
@@ -1063,7 +1069,10 @@ div.tweettxts {
 }
 
 article.youtube {
+	width: 28.715%;
+	min-width: 217px;
 	height: 345px;
+	margin-right: 0;
 }
 
 .youtube iframe {
@@ -1098,6 +1107,7 @@ article.youtube {
 --------------------------------------------------------------*/
 .sketch-videos,
 .sketch-photos {
+	width: 75%;
 	margin-left: 224px;
 	margin-bottom: 25px;
 }
@@ -1129,14 +1139,21 @@ article.youtube {
 --------------------------------------------------------------*/
 .member-biography {
 	float: left;
-	width: 497px;
+	/*width: 497px;*/
+	width: 55.958%;
 	margin-top: 3px;
 	margin-right: 4px;
 	padding-left: 25px;
 }
 
+img.member-photo {
+	width: 32.998%;
+	height: auto;
+}
+
 .member-name {
 	clear: none;
+	width: 57.743%;
 	margin: -18px 22px 0px;
 }
 
@@ -1146,6 +1163,7 @@ article.youtube {
 }
 
 .member-quote {
+	width: 57.743%;
 	margin-top: 42px;
 }
 
@@ -1169,6 +1187,7 @@ blockquote p {
 }
 
 .member-bio {
+	width: 100%;
 	margin-top: 25px;
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
@@ -1194,6 +1213,7 @@ blockquote p {
 
 .member-favorites {
 	float: right;
+	width: 23.437%;
 	margin: 52px 0px 72px;
 }
 
@@ -1424,26 +1444,193 @@ a.lightbox-link:hover {
 }
 
 .columns-3 {
-	width: 162px;
+	/*width: 162px;*/
+	width: 18.243%;
 }
 
 .columns-4 {
-	width: 217px;
+	/*width: 217px;*/
+	width: 24.437%;
 }
 
 .columns-5 {
-	width: 273px;
+	/*width: 273px;*/
+	width: 30.743%;
 }
 
 .columns-7 {
-	width: 385px;
+	/*width: 385px;*/
+	width: 43.356%;
 }
 
 .columns-8 {
-	width: 441px;
+	/*width: 441px;*/
+	width: 49.662%;
 }
 
 .columns-9 {
-	width: 497px;
+	/*width: 497px;*/
+	width: 55.958%;
+}
+
+
+/*--------------------------------------------------------------
+## Mobile
+--------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+
+body {
+	width: 100%;
+	margin:0;
+}
+
+.site-main {
+	margin: 0;
+}
+
+#site-logo {
+	width: 25%;
+	height: auto;
+	margin: 5px 15px;
+}
+
+#site-navigation {
+	margin-top: 0px;
+}
+
+#site-navigation button.menu-toggle {
+	position: relative;
+	top: 50px;
+	left: -42px;
+}
+
+#primary-menu {
+	position: relative;
+	top: 50px;
+	left: -42px;
+	background: #2CBF89;
+}
+
+.main-navigation li {
+	float: none;
+}
+
+#primary-menu li a:hover {
+	background: #fff;
+}
+
+#primary-menu ul.sub-menu {
+	position: absolute;
+	top: 41px;
+	left: 123px;
+}
+
+iframe {
+	width: 70%;
+	height: auto;
+	display: block;
+	margin: 20px auto;
+}
+
+/*HOMEPAGE*/
+
+#featured-section {
+	width: 100%;
+	margin: -50px 15px 20px;
+	border-bottom: dotted 5px #2CBF89;	
+}
+
+article.facebook,
+article.twitter,
+article.youtube {
+	width: 100%; 
+	height: auto;	
+}
+
+article.facebook,
+article.twitter {
+	padding-bottom: 10px;
+	border-bottom: dotted 5px #2CBF89;
+}
+
+div.aiwidgetscss.widget {
+	width: 100%; 
+}
+
+#homepage-introduction {
+	width: 100%;
+	margin: 20px 15px;
+}
+
+.site-info {
+	margin-left: 0;
+	text-align: center;
+}
+
+
+/*SKETCHES PAGE*/
+section.sketch-videos,
+section.sketch-photos {
+	width: 100%;
+	margin: 0px 15px;
+}
+
+.sketch-videos h2,
+.sketch-photos h2 {
+	text-align: center;
+}
+
+div.popup-gallery {
+	margin: 0;
+}
+
+div.popup-gallery div.image-wrap {
+	width: 40%;
+}
+
+
+/*MEMBER BIOS*/
+.member-menu {
+	width: 100%;
+	margin-top: -58px;
+	font-size: 1.4em;
+}
+
+ul#menu-member-menu {
+	/*display: none;*/
+	width: 100%;
+	margin: 0px 15px;
+}
+
+#menu-member-menu li {
+	display: inline;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+#menu-member-menu li a {
+	padding: 0px 10px;
+}
+
+#menu-member-menu li.menu-item.current-menu-item > a {
+	background: #2CBF89;
+}
+
+section.member-biography {
+	width: 100%;
+	margin: 20px 15px;
+}
+
+header.member-biography {
+	width: 100%;
+}
+
+section.member-favorites {
+	float: none;
+	width: 75%;
+	margin: 8%;
+}
+
 }
 

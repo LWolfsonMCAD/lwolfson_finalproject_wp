@@ -11,11 +11,11 @@
 
 		<?php while ( have_posts() ) : the_post(); ?>	
 
-			<div class="member-menu grid columns-3">
+			<div class="member-menu grid">
   				<?php wp_nav_menu( array( 'theme_location' => 'members' ) ); ?>
 			</div>
 
-			<section class="member-biography">
+			<section class="member-biography grid columns-9">
 			<!-- Each member of the group will have their own bio page,  with a subnav on the side to get from one member's page to the next. -->
 
 				
@@ -28,28 +28,28 @@
 
 						if( !empty($image) ): ?>
 
-							<img class="member-photo grid columns-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<img class="member-photo grid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 					<?php endif; ?>
 
-					<h1 class="member-name grid columns-5"><?php the_title(); ?></h1>
+					<h1 class="member-name grid"><?php the_title(); ?></h1>
 					
-					<p class="members-title grid columns-5">
+					<p class="members-title grid">
 						<?php the_field('members_title'); ?>
 					</p>
 				</header>
 
-				<aside class="member-quote grid columns-5">
+				<aside class="member-quote grid">
 					<blockquote><p><?php the_field('quote_motto'); ?></p></blockquote>
 				</aside>
 
-				<div class="member-bio grid columns-8">
+				<div class="member-bio grid">
 					<?php the_field('member_bio'); ?>	
 				</div>
 	
 			</section>	
 
-			<section class="member-favorites columns-4">
+			<section class="member-favorites">
 			<!-- This section can eventually be moved down below the biography to possibly make room for the members' social media feeds or a small photo gallery. -->
 
 				<h2>Favorites</h2><!-- This is currently hidden except from screen readers. -->

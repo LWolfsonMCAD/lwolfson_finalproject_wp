@@ -30,19 +30,19 @@ get_header(); ?>
 		</section>
 
 		<section class="social-media-feeds">
-			<article class="facebook grid columns-5">
+			<article class="facebook grid">
 				<h3>High Dramma on <a href="https://www.facebook.com/highdramma"><span class="screen-reader-text">Facebook</span></a></h3>
 				
 				<div class="feed"><?php fb_feed(); ?></div>
 			</article>
 
-			<article class="twitter grid columns-4">
+			<article class="twitter grid">
 				<h3>High Dramma on <a href="https://twitter.com/highdramma"><span class="screen-reader-text">Twitter</span></a></h3>
 
 				<div class="feed"><?php echo apply_filters('the_content', get_post_meta($post->ID,'twitter_feed',true)); ?></div>
 			</article>
 
-			<article class="youtube grid columns-4">
+			<article class="youtube grid">
 				<h3>High Dramma on <a href="https://www.youtube.com/user/HighDramma"><span class="screen-reader-text">YouTube</span></a></h3>	
 
 				<?php if( have_rows('youtube_feed') ): ?>
