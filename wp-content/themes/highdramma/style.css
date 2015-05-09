@@ -540,6 +540,7 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
+	position: relative;
 	display: block;
 	float: right;
 	margin-top: 72px;
@@ -559,7 +560,6 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
-	display: block;
 }
 
 .main-navigation a {
@@ -592,7 +592,7 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 140px;
 }
 
 .main-navigation ul ul li {
@@ -601,6 +601,8 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
+	color: #000;
+	background: #2CBF89;
 }
 
 .main-navigation ul ul :hover > a,
@@ -614,6 +616,7 @@ a:active {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
+	display: block;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -623,7 +626,10 @@ a:active {
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
+.main-navigation .current_page_ancestor > a,
+#menu-member-menu .current-menu-item > a {
+	color: #000;
+	background: #2CBF89;
 }
 
 #primary-menu ul.sub-menu {
@@ -726,6 +732,10 @@ a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	padding: 4px;
+	font-family: 'Reenie Beanie', sans-serif;
+	font-size: 1em;
+	background: #2CBF89;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -1489,7 +1499,7 @@ body {
 }
 
 #site-logo {
-	width: 25%;
+	width: 120px;
 	height: auto;
 	margin: 5px 15px;
 }
@@ -1515,14 +1525,20 @@ body {
 	float: none;
 }
 
+
 #primary-menu li a:hover {
 	background: #fff;
 }
 
 #primary-menu ul.sub-menu {
 	position: absolute;
-	top: 41px;
-	left: 123px;
+	top: 0px;
+	left: 194px;
+}
+
+#social-menu {
+	top: -50px;
+	left: 2px;
 }
 
 iframe {
@@ -1581,7 +1597,10 @@ section.sketch-photos {
 }
 
 .sketch-videos iframe {
-	margin: 10px auto;
+	width: 276px;
+	height: auto;
+	display: block;
+	margin: 20px auto;
 }
 
 div.popup-gallery {
@@ -1589,7 +1608,7 @@ div.popup-gallery {
 }
 
 div.popup-gallery div.image-wrap {
-	width: 40%;
+	width: 145px;
 }
 
 
@@ -1601,7 +1620,6 @@ div.popup-gallery div.image-wrap {
 }
 
 ul#menu-member-menu {
-	/*display: none;*/
 	width: 100%;
 	margin: 0px 15px;
 }
