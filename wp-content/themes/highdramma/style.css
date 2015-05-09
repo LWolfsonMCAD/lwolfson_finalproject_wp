@@ -592,7 +592,7 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	width: 140px;
+	width: 200px;
 }
 
 .main-navigation ul ul li {
@@ -1523,6 +1523,10 @@ body {
 
 .main-navigation li {
 	float: none;
+}
+
+.main-navigation ul ul a {
+	width: 140px;
 }
 
 
