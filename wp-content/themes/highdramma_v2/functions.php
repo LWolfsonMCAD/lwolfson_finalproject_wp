@@ -112,7 +112,7 @@ function highdramma_scripts() {
 
 	wp_enqueue_style( 'highdramma-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
-	wp_enqueue_style( 'highdramma-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'highdramma-style', get_stylesheet_uri(), null, null );
 
 	wp_enqueue_script( 'highdramma-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
