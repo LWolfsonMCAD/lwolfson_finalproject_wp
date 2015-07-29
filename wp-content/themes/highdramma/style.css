@@ -57,7 +57,7 @@ html {
   overflow-x: auto; }
 
 body {
-  width: 80%;
+  width: 90%;
   max-width: 960px;
   height: auto;
   margin: 0 auto !important;
@@ -1175,154 +1175,161 @@ a.lightbox-link:hover {
   /*--------------------------------------------------------------
   ## Member Bios Post
   --------------------------------------------------------------*/
-  /* commenting out the old mobile info for now...
-  
   body {
-  	width: 100%;
-  	margin:0;
-  }
-  
-  .site-main {
-  	margin: 0;
-  }
-  
-  #site-logo {
-  	width: 120px;
-  	height: auto;
-  	margin: 5px 15px;
-  }
-  
-  #site-navigation {
-  	margin-top: 0px;
-  }
-  
-  #site-navigation button.menu-toggle {
-  	position: relative;
-  	top: 50px;
-  	left: -42px;
-  }
-  
-  #primary-menu {
-  	position: relative;
-  	top: 50px;
-  	left: -42px;
-  	background: #2CBF89;
-  }
-  
-  .main-navigation li {
-  	float: none;
-  }
-  
-  .main-navigation ul ul a {
-  	width: 140px;
-  }
-  
-  
-  #primary-menu li a:hover {
-  	background: #fff;
-  }
-  
-  #primary-menu ul.sub-menu {
-  	position: absolute;
-  	top: 0px;
-  	left: 194px;
-  }
-  
-  #social-menu {
-  	top: -50px;
-  	left: 2px;
-  }
-  
-  iframe {
-  	width: 70%;
-  	height: auto;
-  	display: block;
-  	margin: 20px auto;
-  }
-  
-  /*HOMEPAGE*/
-  #featured-section {
     width: 100%;
-    margin: -50px 15px 20px;
-    border-bottom: dotted 5px #2CBF89; }
+    font-family: Helvetica, sans-serif; }
 
-  article.facebook,
-  article.twitter,
-  article.youtube {
+  header#masthead {
+    height: 115px;
+    background-color: #2cbf89; }
+    header#masthead nav#site-navigation {
+      display: none; }
+    header#masthead div.site-branding {
+      position: relative;
+      height: auto; }
+      header#masthead div.site-branding img#site-logo {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        margin-top: 0;
+        width: 16%;
+        max-width: 200px; }
+
+  div#primary #main {
+    clear: both;
     width: 100%;
-    height: auto; }
-
-  article.facebook,
-  article.twitter {
-    padding-bottom: 10px;
-    border-bottom: dotted 5px #2CBF89; }
-
-  div.aiwidgetscss.widget {
-    width: 100%; }
-
-  #homepage-introduction {
-    width: 100%;
-    margin: 20px 15px; }
-
-  .site-info {
-    margin-left: 0;
-    text-align: center; }
-
-  /*SKETCHES PAGE*/
-  section.sketch-videos,
-  section.sketch-photos {
-    width: 100%;
-    margin: 0px 15px; }
-
-  .sketch-videos h2,
-  .sketch-photos h2 {
-    text-align: center; }
-
-  .sketch-videos iframe {
-    width: 276px;
-    height: auto;
-    display: block;
-    margin: 20px auto; }
-
-  div.popup-gallery {
     margin: 0; }
-
-  div.popup-gallery div.image-wrap {
-    width: 145px; }
-
-  /*MEMBER BIOS*/
-  .member-menu {
-    width: 100%;
-    margin-top: -58px;
-    font-size: 1.4em; }
-
-  ul#menu-member-menu {
-    width: 100%;
-    margin: 0px 15px; }
-
-  #menu-member-menu li {
-    display: inline;
-    float: left;
-    width: 20%;
-    text-align: center; }
-
-  #menu-member-menu li a {
-    padding: 0px 10px; }
-
-  #menu-member-menu li.menu-item.current-menu-item > a {
-    background: #2CBF89; }
-
-  section.member-biography {
-    width: 100%;
-    margin: 20px 15px; }
-
-  header.member-biography {
-    width: 100%; }
+    div#primary #main div.member-menu {
+      width: 100%;
+      margin-top: 0px;
+      font-family: Helvetica, sans-serif;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      border-bottom: 1px solid black; }
+      div#primary #main div.member-menu ul#menu-member-menu {
+        width: 100%;
+        margin: 0;
+        padding: 0px 10px; }
+        div#primary #main div.member-menu ul#menu-member-menu li {
+          float: left;
+          display: inline;
+          width: 20%;
+          text-align: center; }
+          div#primary #main div.member-menu ul#menu-member-menu li a {
+            padding: 0px 10px; }
+        div#primary #main div.member-menu ul#menu-member-menu li.menu-item.current-menu-item > a {
+          background: #2CBF89; }
+    div#primary #main section.member-biography {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 30px 40px;
+      font-family: Helvetica, sans-serif; }
+      div#primary #main section.member-biography header {
+        width: 100%; }
+        div#primary #main section.member-biography header img.member-photo {
+          float: right;
+          width: 40%;
+          max-width: 300px; }
+        div#primary #main section.member-biography header h1.member-name {
+          float: left;
+          display: inline;
+          width: 53%;
+          margin-left: 0;
+          font-family: Helvetica, sans-serif; }
+      div#primary #main section.member-biography aside.member-quote {
+        width: 56%; }
+        div#primary #main section.member-biography aside.member-quote blockquote {
+          margin-left: 22px; }
+          div#primary #main section.member-biography aside.member-quote blockquote p {
+            font-family: Helvetica, sans-serif;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            line-height: 1em; }
+        div#primary #main section.member-biography aside.member-quote blockquote::before {
+          margin-top: -12px;
+          margin-left: -18px;
+          font-size: 1.5em; }
+    div#primary #main div.member-bio {
+      margin-top: 30px;
+      -webkit-column-count: 1; }
+      div#primary #main div.member-bio p {
+        margin-bottom: 15px;
+        font-size: 1.1em; }
 
   section.member-favorites {
-    float: none;
+    float: left;
     width: 75%;
-    margin: 8%; } }
+    margin: 3px 30px; }
+    section.member-favorites aside {
+      float: left; } }
+/* commenting out the old mobile info for now...
+
+body {
+	width: 100%;
+	margin:0;
+}
+
+.site-main {
+	margin: 0;
+}
+
+#site-logo {
+	width: 120px;
+	height: auto;
+	margin: 5px 15px;
+}
+
+#site-navigation {
+	margin-top: 0px;
+}
+
+#site-navigation button.menu-toggle {
+	position: relative;
+	top: 50px;
+	left: -42px;
+}
+
+#primary-menu {
+	position: relative;
+	top: 50px;
+	left: -42px;
+	background: #2CBF89;
+}
+
+.main-navigation li {
+	float: none;
+}
+
+.main-navigation ul ul a {
+	width: 140px;
+}
+
+
+#primary-menu li a:hover {
+	background: #fff;
+}
+
+#primary-menu ul.sub-menu {
+	position: absolute;
+	top: 0px;
+	left: 194px;
+}
+
+#social-menu {
+	top: -50px;
+	left: 2px;
+}
+
+iframe {
+	width: 70%;
+	height: auto;
+	display: block;
+	margin: 20px auto;
+}
+
+/*HOMEPAGE*/
+/*MEMBER BIOS*/
 /*--------------------------------------------------------------
 ### Member Bio Posts
 --------------------------------------------------------------*/
