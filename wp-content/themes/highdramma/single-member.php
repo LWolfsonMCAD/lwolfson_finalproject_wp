@@ -22,6 +22,12 @@
 				<header>
 				<!-- Currently this is to the right of the image, 
 				might eventually move below the actor's main photo. -->
+					<h1 class="member-name grid"><?php the_title(); ?></h1>
+					
+					<p class="members-title grid">
+						<?php the_field('members_title'); ?>
+					</p>
+
 					<?php 
 
 						$image = get_field('member_photo');
@@ -31,12 +37,6 @@
 							<img class="member-photo grid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 					<?php endif; ?>
-
-					<h1 class="member-name grid"><?php the_title(); ?></h1>
-					
-					<p class="members-title grid">
-						<?php the_field('members_title'); ?>
-					</p>
 				</header>
 
 				<aside class="member-quote grid">

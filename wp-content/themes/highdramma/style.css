@@ -1171,7 +1171,7 @@ a.lightbox-link:hover {
 /*--------------------------------------------------------------
 ## Mobile
 --------------------------------------------------------------*/
-@media only screen and (min-width: 320px) and (max-width: 568px) {
+@media only screen and (max-width: 768px) {
   body {
     width: 100%;
     font-family: Helvetica, sans-serif; }
@@ -1190,7 +1190,7 @@ a.lightbox-link:hover {
         right: 14px;
         margin-top: 0;
         width: 16%;
-        max-width: 200px; }
+        max-width: 90px; }
 
   div#primary #main {
     clear: both;
@@ -1258,10 +1258,6 @@ a.lightbox-link:hover {
     font-family: Helvetica, sans-serif; }
     div#primary #main section.member-biography header {
       width: 100%; }
-      div#primary #main section.member-biography header img.member-photo {
-        float: right;
-        width: 40%;
-        max-width: 300px; }
       div#primary #main section.member-biography header h1.member-name {
         float: left;
         display: inline;
@@ -1271,6 +1267,11 @@ a.lightbox-link:hover {
       div#primary #main section.member-biography header p.members-title {
         width: 53%;
         margin: -10px 11px; }
+      div#primary #main section.member-biography header img.member-photo {
+        float: right;
+        width: 40%;
+        max-width: 300px;
+        margin-top: -55px; }
     div#primary #main section.member-biography aside.member-quote {
       width: 56%; }
       div#primary #main section.member-biography aside.member-quote blockquote {
@@ -1297,6 +1298,55 @@ a.lightbox-link:hover {
     margin: 0; }
     section.member-favorites aside {
       float: left; } }
+/*--------------------------------------------------------------
+## Smallest mobile styles
+--------------------------------------------------------------*/
+@media only screen and (max-width: 499px) {
+  header#masthead {
+    height: 91px; }
+    header#masthead div.site-branding a {
+      font-family: Helvetica, sans-serif;
+      text-decoration: none;
+      color: #000; }
+    header#masthead div.site-branding img#site-logo {
+      display: none; }
+    header#masthead div.site-branding h1#site-title {
+      display: inline;
+      float: right;
+      margin-top: -16px;
+      margin-bottom: 0;
+      padding-right: 15px;
+      font-size: 1.3em; }
+
+  /*--------------------------------------------------------------
+  ## Homepage
+  --------------------------------------------------------------*/
+  div#primary #main section.social-media-feeds {
+    padding-top: 0px; }
+    div#primary #main section.social-media-feeds article.youtube iframe {
+      margin: 10px 0px; }
+  div#primary #main section#homepage-introduction div.introduction-content {
+    margin-top: 0px; }
+
+  /*--------------------------------------------------------------
+  ## Member Bios Post
+  --------------------------------------------------------------*/
+  div#primary #main section.member-biography header {
+    width: 100%; }
+    div#primary #main section.member-biography header h1.member-name {
+      width: 100%; }
+    div#primary #main section.member-biography header p.members-title {
+      width: 100%;
+      margin-bottom: 15px;
+      margin-left: 0px; }
+    div#primary #main section.member-biography header img.member-photo {
+      float: left;
+      width: 100%;
+      max-width: 250px;
+      margin-top: 0; }
+  div#primary #main section.member-biography aside.member-quote {
+    width: 100%;
+    margin-right: 0; } }
 /* commenting out the old mobile info for now...
 
 // body {
