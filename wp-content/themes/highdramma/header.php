@@ -23,12 +23,16 @@
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'highdramma' ); ?></a>
+	<div class="main-content open-sidebar">
 
-	<header id="masthead" class="site-header" role="banner">
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'highdramma' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+
+	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
 		</nav><!-- #site-navigation -->
+	<header id="masthead" class="site-header" role="banner">
+	
+	<a href="#" data-toggle=".main-content" id="sidebar-toggle"><img id="mobile-menu-icon" src="<?php  echo get_stylesheet_directory_uri().'/images/mobile_menu_icon40x40.png' ; ?>" alt="hamburger menu icon"></a>
 
 		<div class="site-branding">
 			<a href="<?php echo get_option('home'); ?>"><img id="site-logo" src="<?php  echo get_stylesheet_directory_uri().'/images/hd-logo-200x208.png' ; ?>" alt="<?php bloginfo( 'name' );?> "></a>

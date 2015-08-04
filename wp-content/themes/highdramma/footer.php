@@ -16,6 +16,8 @@
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->
+
+	</div> <!-- sidebar-toggle -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
