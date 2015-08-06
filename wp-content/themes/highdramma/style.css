@@ -57,10 +57,9 @@ html {
   overflow-x: auto; }
 
 body {
-  width: 90%;
   max-width: 960px;
   height: auto;
-  margin: 0 auto !important;
+  margin: 0 auto;
   overflow: hidden;
   overflow-x: hidden; }
 
@@ -317,8 +316,7 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
-body#page {
-  padding-top: 50px;
+div#page {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
   border: 1px solid #d3d3d3; }
@@ -470,11 +468,14 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+nav#mobile-navigation {
+  display: none; }
+
+div#desktop-main-nav {
+  z-index: 1; }
+
 .main-navigation {
-  clear: both;
-  position: relative;
-  display: block;
-  /*width: 575px;*/
+  float: right;
   font-family: 'Reenie Beanie', serif;
   font-size: 2rem;
   background-color: #fff; }
@@ -537,9 +538,7 @@ a:active {
   color: #000;
   background: #2CBF89; }
 
-div.menu-main-navigation-container {
-  float: right;
-  width: 70%;
+div#desktop-main-nav {
   padding-top: 70px; }
 
 #primary-menu {
@@ -582,16 +581,21 @@ div.menu-main-navigation-container {
   background: #2CBF89; }
 
 /*Social media*/
-#social-menu {
+div#social-menu {
   position: relative;
-  top: -130px;
-  left: 782px;
+  float: right;
+  width: 100%;
+  z-index: 1;
+  margin-top: -124px;
+  padding-right: 30px;
   text-align: right;
   font-family: 'Fontawesome';
-  font-size: 32px; }
+  font-size: 32px;
+  background-color: #2CBF89; }
 
 #social-menu ul {
   display: inline;
+  float: right;
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -599,7 +603,7 @@ div.menu-main-navigation-container {
 #social-menu ul li {
   position: relative;
   float: left;
-  padding: 5px 10px; }
+  padding: 0px 10px; }
 
 #social-menu li a {
   color: #000;
@@ -773,20 +777,17 @@ div.menu-main-navigation-container {
 img#mobile-menu-icon {
   display: none; }
 
-div.site-branding img {
-  float: left; }
-
-#masthead {
-  width: 100%;
-  margin-top: -72px; }
+header#masthead {
+  width: 100%; }
 
 #site-logo {
+  position: relative;
+  float: left;
   margin-left: 36px;
-  margin-top: 33px; }
+  margin-top: 33px;
+  z-index: 2; }
 
-#masthead h1 {
-  display: none; }
-
+#masthead h1,
 #masthead h2 {
   display: none; }
 
@@ -1191,44 +1192,54 @@ a.lightbox-link:hover {
     width: 100%;
     font-family: Helvetica, sans-serif; }
 
+  div#page {
+    max-width: 680px;
+    margin: 0 auto; }
+
   body div.main-content.open-sidebar {
     left: 215px;
     position: static; }
 
-  nav#site-navigation {
+  div#desktop-main-nav {
+    display: none; }
+
+  nav#mobile-navigation {
+    display: block;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: -37px;
+    top: 90px;
     width: 100%;
     font-family: Helvetica, sans-serif;
     font-size: 1em; }
-    nav#site-navigation ul#primary-menu li {
-      clear: left; }
-    nav#site-navigation ul#primary-menu ul.sub-menu {
-      left: auto;
-      position: static;
-      z-index: 1;
-      padding-left: 30px;
-      text-align: left; }
+    nav#mobile-navigation ul#mobile-menu.menu {
+      list-style: none; }
+      nav#mobile-navigation ul#mobile-menu.menu li {
+        clear: left;
+        padding: 5px 0px; }
+      nav#mobile-navigation ul#mobile-menu.menu a {
+        text-decoration: none;
+        color: #000; }
+      nav#mobile-navigation ul#mobile-menu.menu ul.sub-menu {
+        list-style: none;
+        text-align: left; }
 
   header#masthead {
-    height: 115px;
+    height: 91px;
     background-color: #2cbf89; }
     header#masthead img#mobile-menu-icon {
       display: inline;
       z-index: 2;
       float: left;
-      margin: 39px 13px -21px 29px; }
+      margin: 30px 13px -21px 29px; }
     header#masthead div.site-branding {
-      position: relative;
-      height: auto; }
+      position: relative; }
       header#masthead div.site-branding img#site-logo {
         position: absolute;
-        top: 10px;
-        right: 14px;
+        top: 7px;
+        right: 19px;
         margin-top: 0;
-        width: 16%;
-        max-width: 90px; }
+        width: 12%;
+        max-width: 75px; }
 
   div#primary #main {
     clear: both;
@@ -1258,7 +1269,7 @@ a.lightbox-link:hover {
         width: 100%;
         max-width: 400px;
         height: 261px;
-        margin: 0% 6%; }
+        margin-left: 15%; }
   div#primary #main section#homepage-introduction {
     clear: both;
     width: 100%;
@@ -1270,7 +1281,7 @@ a.lightbox-link:hover {
   --------------------------------------------------------------*/
   div.member-menu {
     width: 100%;
-    margin-top: -34px;
+    margin-top: 0px;
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
     text-transform: uppercase;
@@ -1316,6 +1327,7 @@ a.lightbox-link:hover {
         margin-left: 22px; }
         div#primary #main section.member-biography aside.member-quote blockquote p {
           font-family: Helvetica, sans-serif;
+          font-style: italic;
           font-size: 0.8em;
           letter-spacing: 1px;
           line-height: 1em; }
@@ -1340,8 +1352,15 @@ a.lightbox-link:hover {
 ## Smallest mobile styles
 --------------------------------------------------------------*/
 @media only screen and (max-width: 499px) {
+  div#page {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    border: none; }
+
   header#masthead {
-    height: 91px; }
+    padding-top: 0px; }
     header#masthead div.site-branding a {
       font-family: Helvetica, sans-serif;
       text-decoration: none;
@@ -1351,8 +1370,8 @@ a.lightbox-link:hover {
     header#masthead div.site-branding h1#site-title {
       display: inline;
       float: right;
-      margin-top: -50px;
-      margin-bottom: 0;
+      margin-top: -14px;
+      margin-bottom: 57px;
       padding-right: 15px;
       font-size: 1.3em; }
 
@@ -1373,7 +1392,9 @@ a.lightbox-link:hover {
   ## Member Bios Post
   --------------------------------------------------------------*/
   div#primary #main div.member-menu {
-    margin-top: 7px; }
+    display: none; }
+    div#primary #main div.member-menu ul {
+      padding: 0; }
   div#primary #main section.member-biography header {
     width: 100%; }
     div#primary #main section.member-biography header h1.member-name {
@@ -1389,7 +1410,11 @@ a.lightbox-link:hover {
       margin-top: 0; }
   div#primary #main section.member-biography aside.member-quote {
     width: 100%;
-    margin-right: 0; } }
+    margin-right: 0; }
+    div#primary #main section.member-biography aside.member-quote p {
+      font-size: 1.5rem; }
+  div#primary #main section.member-favorites {
+    width: 100%; } }
 /* commenting out the old mobile info for now...
 
 // body {

@@ -61,6 +61,10 @@ function highdramma_setup() {
 		'members' => __( 'Member Menu', 'highdramma')
 	) );
 
+	register_nav_menus( array(
+		'mobile' => __( 'Mobile Menu', 'highdramma')
+	) );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

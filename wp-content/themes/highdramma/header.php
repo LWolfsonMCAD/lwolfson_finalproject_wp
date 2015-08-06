@@ -19,17 +19,17 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
+		<nav id="mobile-navigation" class="navigation" role="navigation">
+
+		<?php wp_nav_menu( array( 'theme_location' => 'mobile', 'menu_id' => 'mobile-menu' ) ); ?>
+
+		</nav><!-- #site-navigation -->
 
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'highdramma' ); ?></a>
 	<div class="main-content open-sidebar">
-
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-
-	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-
-		</nav><!-- #site-navigation -->
+	
 	<header id="masthead" class="site-header" role="banner">
 	
 	<a href="#" data-toggle=".main-content" id="sidebar-toggle"><img id="mobile-menu-icon" src="<?php  echo get_stylesheet_directory_uri().'/images/mobile_menu_icon40x40.png' ; ?>" alt="hamburger menu icon"></a>
@@ -37,15 +37,21 @@
 		<div class="site-branding">
 			<a href="<?php echo get_option('home'); ?>"><img id="site-logo" src="<?php  echo get_stylesheet_directory_uri().'/images/hd-logo-200x208.png' ; ?>" alt="<?php bloginfo( 'name' );?> "></a>
 
-			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-
 			<h1 id="site-title"><a href="<?php echo get_option('home'); ?>"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 
-			<?php highdramma_social_menu(); ?>
+			
 		</div><!-- .site-branding -->	
 
-  		
+		<div id="desktop-main-nav">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+		
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+	
+			</nav><!-- #site-navigation -->
+	  		
+	  		<?php highdramma_social_menu(); ?>
+	  	</div>
 	
 
 	</header><!-- #masthead -->
