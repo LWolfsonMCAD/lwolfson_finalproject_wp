@@ -20,9 +20,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-		<nav id="mobile-navigation" class="navigation menu" role="navigation">
+		<nav id="mobile-navigation" class="navigation" role="navigation">
 
-		<?php wp_nav_menu( array( 'theme_location' => 'mobile', 'menu_id' => 'mobile-menu', 'menu_class' => 'active'  ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'mobile', 'menu_id' => 'mobile-menu' ) ); ?>
 
 		</nav><!-- #site-navigation -->
 

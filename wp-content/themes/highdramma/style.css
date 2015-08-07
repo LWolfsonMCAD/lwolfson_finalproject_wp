@@ -1280,9 +1280,10 @@ a.lightbox-link:hover {
     background-color: #2cbf89; }
     header#masthead a#toggle-menu {
       position: absolute;
-      top: 30px;
-      left: 29px;
-      z-index: 30; }
+      top: -1px;
+      left: 11px;
+      z-index: 30;
+      padding: 25px; }
       header#masthead a#toggle-menu img#mobile-menu-icon {
         display: inline;
         float: left; }
@@ -1591,7 +1592,7 @@ a.lightbox-link:hover {
   float: left;
   /*width: 497px;*/
   width: 55.958%;
-  margin-top: 3px;
+  margin-top: -24px;
   margin-right: 4px;
   padding-left: 25px; }
 
@@ -1657,7 +1658,7 @@ blockquote p {
 .member-favorites {
   float: right;
   width: 23.437%;
-  margin: 52px 0px 72px; }
+  margin: 31px 0px 72px; }
 
 .member-favorites h2 {
   display: none; }
