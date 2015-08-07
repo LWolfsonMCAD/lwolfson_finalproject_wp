@@ -20,9 +20,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-		<nav id="mobile-navigation" class="navigation" role="navigation">
+		<nav id="mobile-navigation" class="navigation menu" role="navigation">
 
-		<?php wp_nav_menu( array( 'theme_location' => 'mobile', 'menu_id' => 'mobile-menu' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'mobile', 'menu_id' => 'mobile-menu', 'menu_class' => 'active'  ) ); ?>
 
 		</nav><!-- #site-navigation -->
 
@@ -31,9 +31,9 @@
 	<div class="main-content open-sidebar">
 	
 	<header id="masthead" class="site-header" role="banner">
-	
-	<a href="#" data-toggle=".main-content" id="sidebar-toggle"><img id="mobile-menu-icon" src="<?php  echo get_stylesheet_directory_uri().'/images/mobile_menu_icon40x40.png' ; ?>" alt="hamburger menu icon"></a>
 
+	<a id="toggle-menu" href="#"><img id="mobile-menu-icon" src="<?php  echo get_stylesheet_directory_uri().'/images/mobile_menu_icon40x40.png' ; ?>" alt="hamburger menu icon"></a>
+	
 		<div class="site-branding">
 			<a href="<?php echo get_option('home'); ?>"><img id="site-logo" src="<?php  echo get_stylesheet_directory_uri().'/images/hd-logo-200x208.png' ; ?>" alt="<?php bloginfo( 'name' );?> "></a>
 
